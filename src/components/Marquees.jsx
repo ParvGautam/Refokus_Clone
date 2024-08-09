@@ -23,10 +23,10 @@ function Marquees() {
     ]
 
   return (
-    <div className='py-10'>
+    <div className='py-10 mt-28 w-full overflow-hidden relative'>
         {
             images.map((item,index)=>(
-                <Marquee image={item} />
+                <Marquee duration={index===0 ? "left" : "right"} image={item} />
             ))
         }
     </div>
